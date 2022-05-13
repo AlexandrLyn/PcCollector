@@ -1,0 +1,21 @@
+
+I
+java:S1481".Remove this unused "resultSet" local variable.(º¤ó„ÿÿÿÿÿ
+H
+java:S4925+"-Remove this "Class.forName()", it is useless.(¹µÖÁüÿÿÿÿ
+N	java:S106,"9Replace this use of System.out or System.err by a logger.(¢ŠÈÿ
+J
+java:S1128"4Remove this unused import 'UpdateDB.StorageUrlGame'.(§…É´
+H
+java:S1128"2Remove this unused import 'UpdateDB.UpdatePrices'.(ø¤Ý±
+K
+java:S1128"0Remove this unused import 'java.io.IOException'.(ªº»Úýÿÿÿÿ
+?
+java:S1068")Remove this unused "table" private field.(€¨îŠ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(µÚÅ úÿÿÿÿ
+^
+java:S2259 "HA "NullPointerException" could be thrown; "connection" is nullable here.(ôêÂœ
+]
+java:S2259!"GA "NullPointerException" could be thrown; "statement" is nullable here.(³úÀ‹
+b
+java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(‡²€·ýÿÿÿÿ
