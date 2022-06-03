@@ -1,6 +1,12 @@
 package UpdateDB;
 
+
+/**
+ * Класс отвечающий за хранение - передачу из файла, ссылок на офисные комплектующие
+ */
+
 public class StorageUrlOffice extends StorageUrl{
+
 
     @Override
     protected String[] gpuUrl() {
@@ -9,41 +15,48 @@ public class StorageUrlOffice extends StorageUrl{
 
     @Override
     protected String[] motherBoardUrl() {
-        return new String[0];
+        motherBoard = readerM.readerString("Storage\\URL\\OfficeURL\\MB.txt");
+        return motherBoard;
     }
 
     @Override
     protected String[] ramUrl() {
-        return new String[0];
+        ram = readerM.readerString("Storage\\URL\\OfficeURL\\RAM.txt");
+        return ram;
     }
 
     @Override
     protected String[] cpuUrl() {
-        return new String[0];
+        cpu = readerM.readerString("Storage\\URL\\OfficeURL\\CPU.txt");
+        return cpu;
     }
 
     @Override
     protected String[] blockPowerUrl() {
-        return new String[0];
+        blockPower = readerM.readerString("Storage\\URL\\OfficeURL\\BlockPower.txt");
+        return blockPower;
     }
 
     @Override
     protected String[] casePcUrl() {
-        return new String[0];
+        casePc = readerM.readerString("Storage\\URL\\OfficeURL\\case.txt");
+        return casePc;
     }
 
     @Override
     protected String[] hddUrl() {
-        return new String[0];
+        return hdd;
     }
 
     @Override
     protected String[] ssdUrl() {
-        return new String[0];
+        ssd = readerM.readerString("Storage\\URL\\OfficeURL\\SSD.txt");
+        return ssd;
     }
 
     @Override
     protected String[] coolingUrl() {
-        return new String[0];
+        cooling = readerM.readerString("Storage\\URL\\OfficeURL\\Cooling.txt");
+        return cooling;
     }
 }

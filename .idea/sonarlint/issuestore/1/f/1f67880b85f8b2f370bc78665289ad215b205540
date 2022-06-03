@@ -1,0 +1,15 @@
+
+Q	java:S125
+"<This block of commented-out lines of code should be removed.(œÓÄÏ
+V	java:S125"<This block of commented-out lines of code should be removed.(òÄÇÃûÿÿÿÿ
+V	java:S125"<This block of commented-out lines of code should be removed.(ìÜ’‚üÿÿÿÿ
+X	java:S125"<This block of commented-out lines of code should be removed.(ƒÜ—É8âïáü‘0
+P	java:S125"<This block of commented-out lines of code should be removed.(ïÿÖ`
+P	java:S125"<This block of commented-out lines of code should be removed.(ïÿÖ`
+P	java:S125%"<This block of commented-out lines of code should be removed.(ïÿÖ`
+Q	java:S125*"<This block of commented-out lines of code should be removed.(÷³·µ
+M
+java:S1128"+Remove this unused import 'Reader.ReaderM'.(åú•½şÿÿÿÿ8ìïáü‘0
+O
+java:S1128"-Remove this unused import 'java.util.Arrays'.(î–˜Éüÿÿÿÿ8íïáü‘0
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(µÚÅ úÿÿÿÿ

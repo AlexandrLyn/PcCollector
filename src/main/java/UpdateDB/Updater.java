@@ -1,32 +1,82 @@
 package UpdateDB;
 
-import com.example.myfirstapp.HelloController;
+/**
+ * Класс отвечающий за запуск потоков, обнавляющих цены и наличие определенных типов комплектующих в БД, в
+ * зависимости от выбранного типа пк пользователем
+ */
 
 public class Updater {
-    HelloController helloController = new HelloController();
-    public void update(String typePc) {
+
+    StorageUrl storageUrl;
+
+    public String update(String typePc) {
         if (typePc.equals("Game PC")) {
-            StorageUrl storageUrl = new StorageUrlGame();
+            storageUrl = new StorageUrlGame();
             UpdaterDB upadterDBgpu = new UpdaterDB("GPU_id", storageUrl.gpuUrl(), "gpugame");
             upadterDBgpu.start();
-            UpdaterDB upadterDBblock = new UpdaterDB("BP_id", storageUrl.blockPowerUrl(), "gameblockpower");
+            UpdaterDB upadterDBblock = new UpdaterDB("BP_id", storageUrl.blockPowerUrl(), "gamebp");
             upadterDBblock.start();
-            UpdaterDB updaterDBmotherboardgame = new UpdaterDB("board_id", storageUrl.motherBoardUrl(), "motherboardgame");
-            updaterDBmotherboardgame.start();
-            UpdaterDB updaterDBgamessd = new UpdaterDB("ssd_id", storageUrl.ssdUrl(), "gamessd");
-            updaterDBgamessd.start();
-            UpdaterDB updaterDBgameRam = new UpdaterDB("ram_id", storageUrl.ramUrl(), "gameram");
-            updaterDBgameRam.start();
-            UpdaterDB updaterDBgamehdd = new UpdaterDB("hdd_id", storageUrl.hddUrl(), "gamehdd");
-            updaterDBgamehdd.start();
-            UpdaterDB updaterDBgamecpu = new UpdaterDB("cpu_id", storageUrl.cpuUrl(), "gamecpu");
-            updaterDBgamecpu.start();
-            UpdaterDB updaterDBgamecooling = new UpdaterDB("cooling_id", storageUrl.coolingUrl(), "gamecooling");
-            updaterDBgamecooling.start();
-            UpdaterDB updaterDBgamecase = new UpdaterDB("case_id", storageUrl.casePcUrl(), "gamecase");
-            updaterDBgamecase.start();
+            UpdaterDB updaterDBmotherboard = new UpdaterDB("board_id", storageUrl.motherBoardUrl(), "gamemotherboard");
+            updaterDBmotherboard.start();
+            UpdaterDB updaterDBssd = new UpdaterDB("ssd_id", storageUrl.ssdUrl(), "gamessd");
+            updaterDBssd.start();
+            UpdaterDB updaterDBRam = new UpdaterDB("ram_id", storageUrl.ramUrl(), "gameram");
+            updaterDBRam.start();
+            UpdaterDB updaterDBhdd = new UpdaterDB("hdd_id", storageUrl.hddUrl(), "gamehdd");
+            updaterDBhdd.start();
+            UpdaterDB updaterDBcpu = new UpdaterDB("cpu_id", storageUrl.cpuUrl(), "gamecpu");
+            updaterDBcpu.start();
+            UpdaterDB updaterDBcooling = new UpdaterDB("cooling_id", storageUrl.coolingUrl(), "gamecooling");
+            updaterDBcooling.start();
+            UpdaterDB updaterDBcase = new UpdaterDB("case_id", storageUrl.casePcUrl(), "gamecase");
+            updaterDBcase.start();
+            try {
+                updaterDBcase.join();
+                updaterDBcooling.join();
+                updaterDBcpu.join();
+                updaterDBcooling.join();
+                updaterDBRam.join();
+                updaterDBssd.join();
+                upadterDBblock.join();
+                upadterDBgpu.join();
+                updaterDBhdd.join();
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                e.printStackTrace();
+            }
+            System.out.println("обновление цен для игр");
+
+            return "готово";
         } else {
-            System.out.println("Офисный планктон");
+            storageUrl = new StorageUrlOffice();
+            UpdaterDB upadterDBblock = new UpdaterDB("bp_id", storageUrl.blockPowerUrl(), "officebp");
+            upadterDBblock.start();
+            UpdaterDB updaterDBmotherboard = new UpdaterDB("mb_id", storageUrl.motherBoardUrl(), "officemotherboard");
+            updaterDBmotherboard.start();
+            UpdaterDB updaterDBssd = new UpdaterDB("ssd_id", storageUrl.ssdUrl(), "officessd");
+            updaterDBssd.start();
+            UpdaterDB updaterDBRam = new UpdaterDB("ram_id", storageUrl.ramUrl(), "officeram");
+            updaterDBRam.start();
+            UpdaterDB updaterDBcpu = new UpdaterDB("cpu_id", storageUrl.cpuUrl(), "officecpu");
+            updaterDBcpu.start();
+            UpdaterDB updaterDBcooling = new UpdaterDB("cooling_id", storageUrl.coolingUrl(), "officecooling");
+            updaterDBcooling.start();
+            UpdaterDB updaterDBcase = new UpdaterDB("case_id", storageUrl.casePcUrl(), "officecase");
+            updaterDBcase.start();
+            System.out.println("обновление цен для оффиса");
+            try {
+                updaterDBcase.join();
+                updaterDBcooling.join();
+                updaterDBcpu.join();
+                updaterDBcooling.join();
+                updaterDBRam.join();
+                updaterDBssd.join();
+                upadterDBblock.join();
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                e.printStackTrace();
+            }
+            return "готово";
         }
     }
 }

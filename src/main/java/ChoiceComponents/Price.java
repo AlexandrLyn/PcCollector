@@ -1,5 +1,9 @@
 package ChoiceComponents;
 
+/**
+ * Класс для хранения цены комплектующего
+ */
+
 public class Price {
     private int priceComponent;
 

@@ -1,21 +1,17 @@
 
-I
-java:S1481".Remove this unused "resultSet" local variable.(º¤ó„ÿÿÿÿÿ
-H
-java:S4925+"-Remove this "Class.forName()", it is useless.(¹µÖÁüÿÿÿÿ
-N	java:S106,"9Replace this use of System.out or System.err by a logger.(¢ŠÈÿ
-J
-java:S1128"4Remove this unused import 'UpdateDB.StorageUrlGame'.(§…É´
-H
-java:S1128"2Remove this unused import 'UpdateDB.UpdatePrices'.(ø¤İ±
-K
-java:S1128"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ
-?
-java:S1068")Remove this unused "table" private field.(€¨îŠ
+h	java:S116"NRename this field "URL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(úÈûÿÿÿÿ
+j	java:S116"PRename this field "LOGIN" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İö¹¸úÿÿÿÿ
+h	java:S116"SRename this field "PASSWORD" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Èğİ
+<
+java:S1170"!Make this final field static too.(úÈûÿÿÿÿ
+<
+java:S1170"!Make this final field static too.(İö¹¸úÿÿÿÿ
+7
+java:S1170"!Make this final field static too.(Èğİ
 t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(µÚÅ úÿÿÿÿ
-^
-java:S2259 "HA "NullPointerException" could be thrown; "connection" is nullable here.(ôêÂœ
 ]
-java:S2259!"GA "NullPointerException" could be thrown; "statement" is nullable here.(³úÀ‹
-b
-java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(‡²€·ıÿÿÿÿ
+java:S39738"GUse indentation to denote the code conditionally executed by this "if".(øøµì
+]
+java:S3973:"GUse indentation to denote the code conditionally executed by this "if".(’şØ¸
+
+java:S2681:"†This line will not be executed conditionally; only the first line of this 2-line block will be. The rest will execute unconditionally.(’şØ¸

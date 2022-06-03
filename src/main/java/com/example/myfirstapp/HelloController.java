@@ -1,6 +1,7 @@
 package com.example.myfirstapp;
 
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 import UpdateDB.Updater;
@@ -37,60 +38,31 @@ public class HelloController {
     @FXML
     private ToggleGroup variantGroup;
 
-    private String typePc;
+    private static String typePc;
 
     public String getTypePc() {
         return typePc;
     }
 
+    /** Функция отвечающая за закрытие программы */
     @FXML
     void goExit() {
         Stage stage = (Stage) buttonClose.getScene().getWindow();
         stage.close();
     }
 
+    /** Функция отвечающая за переход к следующему окну */
     @FXML
     void goNext() {
         RadioButton selectedRadio = (RadioButton) variantGroup.getSelectedToggle();
         if(selectedRadio != null) {
             typePc = selectedRadio.getText();
             System.out.println(typePc);
-            Updater updater = new Updater();
-            updater.update(typePc);
             TransitiionButton transitiionButton = new TransitiionButton();
             transitiionButton.transitiionWithoutEvent(buttonNext, "Budget.fxml", "Pc collector");
+
         }
-
     }
 
-    @FXML
-    void initialize() {
-
-    }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

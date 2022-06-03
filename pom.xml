@@ -43,6 +43,11 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.45</version>
         </dependency>
+        <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>MyFirstApp</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>

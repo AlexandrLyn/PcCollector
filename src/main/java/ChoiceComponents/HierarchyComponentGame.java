@@ -1,47 +1,70 @@
 package ChoiceComponents;
 
-import java.util.ArrayList;
-import java.util.List;
+/**
+ * Класс отвечающий за хранение - передачу из файла, комплектующих на игровые комплектующие
+ */
 
-public class HierarchyComponentGame {
+public class HierarchyComponentGame extends HierarchyComponentPC{
+    @Override
     protected String[] hierarchyCpu() {
-        String[] hierarchy = new String[] { "'10100f'", "'12100f'", "'10400f'", "'12400f'", "'10700f'", "'10700kf'", "'12700f'",
-        "'12700kf'", "'10900f'", "'12900kf'"};
+        String[] hierarchy = readerM.readerString("Storage\\Assembly\\GameAssembly\\CPU.txt");
         return hierarchy;
     }
+    @Override
     protected String[] hierarchyGpu() {
-        String[] hierarchy = new String[] { "'GTX1650'", "'GTX1660S'", "'GTX1660TI'", "'RTX3050'", "'RTX2060'", "'RTX3060'",
-                "'RTX3060TI'", "'RTX3070'", "'RTX3080'", "'RTX3080TI'", "'RTX3090'"};
+        String[] hierarchy = readerM.readerString("Storage\\Assembly\\GameAssembly\\GPU.txt");
         return hierarchy;
     }
+    @Override
     protected String[] hierarchyMotherBoard() {
-        String[] hierarchy = new String[] { "'h410'", "'h610'", "'b560'", "'h610'", "'b560'", "'z590'", "'h610'",
-                "'z690'", "'b560'", "'z690'"};
+        String[] hierarchy = readerM.readerString("Storage\\Assembly\\GameAssembly\\MB.txt");
         return hierarchy;
     }
+    @Override
     protected int[] hierarchyHdd() {
-        int[] hierarchy = new int[] { 1000, 1000, 2000 };
+        int[] hierarchy = readerM.readerInt("Storage\\Assembly\\GameAssembly\\HDD.txt");
         return hierarchy;
     }
+    @Override
     protected int[] hierarchySsd() {
-        int[] hierarchy = new int[] { 240, 500, 1000 };
+        int[] hierarchy = readerM.readerInt("Storage\\Assembly\\GameAssembly\\SSD.txt");
         return hierarchy;
     }
+    @Override
     protected int[] hierarchyRam() {
-        int[] hierarchy = new int[] { 8, 16, 32 };
+        int[] hierarchy = readerM.readerInt("Storage\\Assembly\\GameAssembly\\RAM.txt");
         return hierarchy;
     }
+    @Override
     protected int[] hierarchyBlockPower() {
-        int[] hierarchy = new int[] { 500, 500, 500, 700, 700, 700, 700, 850, 850, 850, 850 };
+        int[] hierarchy = readerM.readerInt("Storage\\Assembly\\GameAssembly\\BlockPower.txt");
         return hierarchy;
     }
+    @Override
     protected int[] hierarchyCase() {
-        int[] hierarchy = new int[] { 1, 2 };
+        int[] hierarchy = readerM.readerInt("Storage\\Assembly\\GameAssembly\\case.txt");
         return hierarchy;
     }
+    @Override
     protected String[] hierarchyCooling() {
-        String[] hierarchy = new String[] { "'150'", "'150'","'150'","'150'","'200'","'380'","'200'","'380'","'380'",
-                "'380'"};
+        String[] hierarchy = readerM.readerString("Storage\\Assembly\\GameAssembly\\Cooling.txt");
         return hierarchy;
+    }
+
+    /** Функция отвечающая за мин. бюджет игрового ПК*/
+
+    @Override
+    public int minBudget() {
+        int budget = min.newMinPrice(0,hierarchyCpu(),"partspc.gamecpu", "model").getPrice()
+                + min.newMinPrice(0, hierarchyMotherBoard(),"partspc.gamemotherboard", "chipset").getPrice()
+                + min.newMinPrice(0, hierarchyCooling(), "partspc.gamecooling", "tdp").getPrice()
+                + min.newMinPrice(0, hierarchyBlockPower(), "partspc.gamebp", "capacity").getPrice()
+                + min.newMinPrice(0, hierarchySsd(), "partspc.gamessd", "volume").getPrice()
+                + min.newMinPrice(0, hierarchyRam(),"partspc.gameram", "volume").getPrice()
+                + min.newMinPrice(0, hierarchyCase(),"partspc.gamecase", "hierarchy").getPrice()
+                + min.newMinPrice(0, hierarchyGpu(), "partspc.gpugame", "GPU_line").getPrice()
+                + min.newMinPrice(0,hierarchyHdd(), "partspc.gamehdd", "volume").getPrice();
+
+        return budget;
     }
 }

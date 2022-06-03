@@ -93,16 +93,5 @@
                </light>
             </Lighting>
          </effect></RadioButton>
-      <RadioButton fx:id="variant3" layoutX="183.0" layoutY="192.0" mnemonicParsing="false" text="Мне вообще не нужен этот ваш ПК гейминг, я люблю PS и Xbox" textFill="AQUA" toggleGroup="$variantGroup">
-         <effect>
-            <Lighting diffuseConstant="1.45" specularConstant="2.0" surfaceScale="2.65">
-               <bumpInput>
-                  <Shadow />
-               </bumpInput>
-               <light>
-                  
-               </light>
-            </Lighting>
-         </effect></RadioButton>
    </children>
 </AnchorPane>

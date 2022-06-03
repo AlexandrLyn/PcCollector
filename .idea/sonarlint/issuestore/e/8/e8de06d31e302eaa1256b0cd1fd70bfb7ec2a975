@@ -1,8 +1,4 @@
 
->
-java:S1643"Use a StringBuilder instead.(ã¾¯úÿÿÿÿ8µ‚Ñ¯ˆ0
+7
+java:S1643"Use a StringBuilder instead.(ã¾¯úÿÿÿÿ
 n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÄœâW
-_
-java:S2259"BA "NullPointerException" could be thrown; "text" is nullable here.(·–­Ö8Í‚Ñ¯ˆ0
-h
-java:S2095"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(–â˜Y8Í‚Ñ¯ˆ0

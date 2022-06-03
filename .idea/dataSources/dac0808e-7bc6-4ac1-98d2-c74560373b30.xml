@@ -1,93 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="partspc@localhost">
   <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.32">
-    <root id="1">
-      <DefaultCasing>lower/lower</DefaultCasing>
-      <DefaultEngine>InnoDB</DefaultEngine>
-      <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
-      <Grants>|root||root|localhost|ALTER|G
-|root||root|localhost|ALTER ROUTINE|G
-|root||root|localhost|APPLICATION_PASSWORD_ADMIN|G
-|root||mysql.infoschema|localhost|AUDIT_ABORT_EXEMPT|G
-|root||mysql.session|localhost|AUDIT_ABORT_EXEMPT|G
-|root||mysql.sys|localhost|AUDIT_ABORT_EXEMPT|G
-|root||root|localhost|AUDIT_ABORT_EXEMPT|G
-|root||root|localhost|AUDIT_ADMIN|G
-|root||root|localhost|AUTHENTICATION_POLICY_ADMIN|G
-|root||mysql.session|localhost|BACKUP_ADMIN|G
-|root||root|localhost|BACKUP_ADMIN|G
-|root||root|localhost|BINLOG_ADMIN|G
-|root||root|localhost|BINLOG_ENCRYPTION_ADMIN|G
-|root||mysql.session|localhost|CLONE_ADMIN|G
-|root||root|localhost|CLONE_ADMIN|G
-|root||mysql.session|localhost|CONNECTION_ADMIN|G
-|root||root|localhost|CONNECTION_ADMIN|G
-|root||root|localhost|CREATE|G
-|root||root|localhost|CREATE ROLE|G
-|root||root|localhost|CREATE ROUTINE|G
-|root||root|localhost|CREATE TABLESPACE|G
-|root||root|localhost|CREATE TEMPORARY TABLES|G
-|root||root|localhost|CREATE USER|G
-|root||root|localhost|CREATE VIEW|G
-|root||root|localhost|DELETE|G
-|root||root|localhost|DROP|G
-|root||root|localhost|DROP ROLE|G
-|root||root|localhost|ENCRYPTION_KEY_ADMIN|G
-|root||root|localhost|EVENT|G
-|root||root|localhost|EXECUTE|G
-|root||root|localhost|FILE|G
-|root||root|localhost|FLUSH_OPTIMIZER_COSTS|G
-|root||root|localhost|FLUSH_STATUS|G
-|root||root|localhost|FLUSH_TABLES|G
-|root||root|localhost|FLUSH_USER_RESOURCES|G
-|root||root|localhost|GROUP_REPLICATION_ADMIN|G
-|root||root|localhost|GROUP_REPLICATION_STREAM|G
-|root||root|localhost|INDEX|G
-|root||root|localhost|INNODB_REDO_LOG_ARCHIVE|G
-|root||root|localhost|INNODB_REDO_LOG_ENABLE|G
-|root||root|localhost|INSERT|G
-|root||root|localhost|LOCK TABLES|G
-|root||root|localhost|PASSWORDLESS_USER_ADMIN|G
-|root||mysql.session|localhost|PERSIST_RO_VARIABLES_ADMIN|G
-|root||root|localhost|PERSIST_RO_VARIABLES_ADMIN|G
-|root||root|localhost|PROCESS|G
-|root||root|localhost|REFERENCES|G
-|root||root|localhost|RELOAD|G
-|root||root|localhost|REPLICATION CLIENT|G
-|root||root|localhost|REPLICATION SLAVE|G
-|root||root|localhost|REPLICATION_APPLIER|G
-|root||root|localhost|REPLICATION_SLAVE_ADMIN|G
-|root||root|localhost|RESOURCE_GROUP_ADMIN|G
-|root||root|localhost|RESOURCE_GROUP_USER|G
-|root||root|localhost|ROLE_ADMIN|G
-|root||mysql.infoschema|localhost|SELECT|G
-|root||root|localhost|SELECT|G
-|root||root|localhost|SERVICE_CONNECTION_ADMIN|G
-|root||mysql.session|localhost|SESSION_VARIABLES_ADMIN|G
-|root||root|localhost|SESSION_VARIABLES_ADMIN|G
-|root||root|localhost|SET_USER_ID|G
-|root||root|localhost|SHOW DATABASES|G
-|root||root|localhost|SHOW VIEW|G
-|root||root|localhost|SHOW_ROUTINE|G
-|root||mysql.session|localhost|SHUTDOWN|G
-|root||root|localhost|SHUTDOWN|G
-|root||mysql.session|localhost|SUPER|G
-|root||root|localhost|SUPER|G
-|root||mysql.infoschema|localhost|SYSTEM_USER|G
-|root||mysql.session|localhost|SYSTEM_USER|G
-|root||mysql.sys|localhost|SYSTEM_USER|G
-|root||root|localhost|SYSTEM_USER|G
-|root||mysql.session|localhost|SYSTEM_VARIABLES_ADMIN|G
-|root||root|localhost|SYSTEM_VARIABLES_ADMIN|G
-|root||root|localhost|TABLE_ENCRYPTION_ADMIN|G
-|root||root|localhost|TRIGGER|G
-|root||root|localhost|UPDATE|G
-|root||root|localhost|XA_RECOVER_ADMIN|G
-|root||root|localhost|grant option|G
-performance_schema|schema||mysql.session|localhost|SELECT|G
-sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
-      <ServerVersion>8.0.28</ServerVersion>
-    </root>
+    <root id="1"/>
     <collation id="2" parent="1" name="armscii8_general_ci">
       <Charset>armscii8</Charset>
       <DefaultForCharset>1</DefaultForCharset>
@@ -985,7 +899,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     <user id="285" parent="1" name="root">
       <Host>localhost</Host>
     </user>
-    <table id="286" parent="274" name="gameblockpower">
+    <table id="286" parent="274" name="gamebp">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
@@ -1005,310 +919,539 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="291" parent="274" name="gameram">
+    <table id="291" parent="274" name="gamemotherboard">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="292" parent="274" name="gamessd">
+    <table id="292" parent="274" name="gameram">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="293" parent="274" name="gpugame">
+    <table id="293" parent="274" name="gamessd">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="294" parent="274" name="motherboardgame">
+    <table id="294" parent="274" name="gpugame">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <column id="295" parent="286" name="BP_id">
+    <table id="295" parent="274" name="officebp">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="296" parent="274" name="officecase">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="297" parent="274" name="officecooling">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="298" parent="274" name="officecpu">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="299" parent="274" name="officemotherboard">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="300" parent="274" name="officeram">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="301" parent="274" name="officessd">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <column id="302" parent="286" name="BP_id">
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="296" parent="286" name="mark">
+    <column id="303" parent="286" name="mark">
       <DataType>varchar(30)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="297" parent="286" name="model">
+    <column id="304" parent="286" name="model">
       <DataType>varchar(30)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="298" parent="286" name="certificate">
+    <column id="305" parent="286" name="certificate">
       <DataType>varchar(30)|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="299" parent="286" name="price">
+    <column id="306" parent="286" name="price">
       <DataType>int|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="300" parent="286" name="capacity">
+    <column id="307" parent="286" name="capacity">
       <DataType>int|0s</DataType>
       <Position>6</Position>
     </column>
-    <key id="301" parent="286" name="PRIMARY">
+    <key id="308" parent="286" name="PRIMARY">
       <ColNames>BP_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
     </key>
-    <column id="302" parent="287" name="case_id">
+    <column id="309" parent="287" name="case_id">
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="303" parent="287" name="mark">
+    <column id="310" parent="287" name="mark">
       <DataType>varchar(30)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="304" parent="287" name="model">
+    <column id="311" parent="287" name="model">
       <DataType>varchar(30)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="305" parent="287" name="hierarchy">
+    <column id="312" parent="287" name="hierarchy">
       <DataType>int|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="306" parent="287" name="price">
+    <column id="313" parent="287" name="price">
       <DataType>int|0s</DataType>
       <Position>5</Position>
     </column>
-    <key id="307" parent="287" name="PRIMARY">
+    <key id="314" parent="287" name="PRIMARY">
       <ColNames>case_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
     </key>
-    <column id="308" parent="288" name="cooling_id">
+    <column id="315" parent="288" name="cooling_id">
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="309" parent="288" name="mark">
+    <column id="316" parent="288" name="mark">
       <DataType>varchar(30)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="310" parent="288" name="model">
+    <column id="317" parent="288" name="model">
       <DataType>varchar(30)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="311" parent="288" name="tdp">
+    <column id="318" parent="288" name="tdp">
       <DataType>varchar(30)|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="312" parent="288" name="fastening">
+    <column id="319" parent="288" name="fastening">
       <DataType>varchar(30)|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="313" parent="288" name="price">
+    <column id="320" parent="288" name="price">
       <DataType>int|0s</DataType>
       <Position>6</Position>
     </column>
-    <column id="314" parent="288" name="type_cooling">
+    <column id="321" parent="288" name="type_cooling">
       <DataType>varchar(30)|0s</DataType>
       <Position>7</Position>
     </column>
-    <key id="315" parent="288" name="PRIMARY">
+    <key id="322" parent="288" name="PRIMARY">
       <ColNames>cooling_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
     </key>
-    <column id="316" parent="289" name="cpu_id">
+    <column id="323" parent="289" name="cpu_id">
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="317" parent="289" name="mark">
+    <column id="324" parent="289" name="mark">
       <DataType>varchar(30)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="318" parent="289" name="cpu_line">
+    <column id="325" parent="289" name="cpu_line">
       <DataType>varchar(30)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="319" parent="289" name="generation">
+    <column id="326" parent="289" name="model">
       <DataType>varchar(30)|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="320" parent="289" name="socket_cpu">
+    <column id="327" parent="289" name="socket_cpu">
       <DataType>varchar(30)|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="321" parent="289" name="price">
+    <column id="328" parent="289" name="price">
       <DataType>int|0s</DataType>
       <Position>6</Position>
     </column>
-    <column id="322" parent="289" name="version">
+    <column id="329" parent="289" name="version">
       <DataType>varchar(30)|0s</DataType>
       <Position>7</Position>
     </column>
-    <key id="323" parent="289" name="PRIMARY">
+    <key id="330" parent="289" name="PRIMARY">
       <ColNames>cpu_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
     </key>
-    <column id="324" parent="290" name="hdd_id">
+    <column id="331" parent="290" name="hdd_id">
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="325" parent="290" name="mark">
+    <column id="332" parent="290" name="mark">
       <DataType>varchar(30)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="326" parent="290" name="model">
+    <column id="333" parent="290" name="model">
       <DataType>varchar(30)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="327" parent="290" name="price">
+    <column id="334" parent="290" name="price">
       <DataType>int|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="328" parent="290" name="volume">
+    <column id="335" parent="290" name="volume">
       <DataType>int|0s</DataType>
       <Position>5</Position>
     </column>
-    <key id="329" parent="290" name="PRIMARY">
+    <key id="336" parent="290" name="PRIMARY">
       <ColNames>hdd_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
     </key>
-    <column id="330" parent="291" name="ram_id">
+    <column id="337" parent="291" name="board_id">
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="331" parent="291" name="mark">
+    <column id="338" parent="291" name="mark">
       <DataType>varchar(30)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="332" parent="291" name="numberBoard">
+    <column id="339" parent="291" name="model">
       <DataType>varchar(30)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="333" parent="291" name="frequency">
+    <column id="340" parent="291" name="socketm">
       <DataType>varchar(30)|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="334" parent="291" name="price">
-      <DataType>int|0s</DataType>
+    <column id="341" parent="291" name="chipset">
+      <DataType>varchar(30)|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="335" parent="291" name="volume">
+    <column id="342" parent="291" name="price">
       <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <column id="336" parent="291" name="model">
+    <column id="343" parent="291" name="ddr">
       <DataType>varchar(30)|0s</DataType>
       <Position>7</Position>
     </column>
-    <key id="337" parent="291" name="PRIMARY">
+    <key id="344" parent="291" name="PRIMARY">
+      <ColNames>board_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+    </key>
+    <column id="345" parent="292" name="ram_id">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="346" parent="292" name="mark">
+      <DataType>varchar(30)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="347" parent="292" name="numberBoard">
+      <DataType>varchar(30)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="348" parent="292" name="frequency">
+      <DataType>varchar(30)|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="349" parent="292" name="price">
+      <DataType>int|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="350" parent="292" name="volume">
+      <DataType>int|0s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="351" parent="292" name="model">
+      <DataType>varchar(30)|0s</DataType>
+      <Position>7</Position>
+    </column>
+    <key id="352" parent="292" name="PRIMARY">
       <ColNames>ram_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
     </key>
-    <column id="338" parent="292" name="ssd_id">
+    <column id="353" parent="293" name="ssd_id">
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="339" parent="292" name="mark">
+    <column id="354" parent="293" name="mark">
       <DataType>varchar(30)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="340" parent="292" name="model">
+    <column id="355" parent="293" name="model">
       <DataType>varchar(30)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="341" parent="292" name="price">
+    <column id="356" parent="293" name="price">
       <DataType>int|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="342" parent="292" name="volume">
+    <column id="357" parent="293" name="volume">
       <DataType>int|0s</DataType>
       <Position>5</Position>
     </column>
-    <key id="343" parent="292" name="PRIMARY">
+    <key id="358" parent="293" name="PRIMARY">
       <ColNames>ssd_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
     </key>
-    <column id="344" parent="293" name="GPU_id">
+    <column id="359" parent="294" name="GPU_id">
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="345" parent="293" name="mark">
+    <column id="360" parent="294" name="mark">
       <DataType>varchar(30)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="346" parent="293" name="GPU_line">
+    <column id="361" parent="294" name="GPU_line">
       <DataType>varchar(30)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="347" parent="293" name="model">
+    <column id="362" parent="294" name="model">
       <DataType>varchar(50)|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="348" parent="293" name="TDP">
+    <column id="363" parent="294" name="TDP">
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="349" parent="293" name="min_power_unit">
+    <column id="364" parent="294" name="min_power_unit">
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <column id="350" parent="293" name="price">
+    <column id="365" parent="294" name="price">
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
-    <key id="351" parent="293" name="PRIMARY">
+    <key id="366" parent="294" name="PRIMARY">
       <ColNames>GPU_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
     </key>
-    <column id="352" parent="294" name="board_id">
+    <column id="367" parent="295" name="bp_id">
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="353" parent="294" name="mark">
+    <column id="368" parent="295" name="mark">
       <DataType>varchar(30)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="354" parent="294" name="model">
+    <column id="369" parent="295" name="model">
       <DataType>varchar(30)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="355" parent="294" name="socketm">
+    <column id="370" parent="295" name="price">
+      <DataType>int|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="371" parent="295" name="capacity">
+      <DataType>int|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <key id="372" parent="295" name="PRIMARY">
+      <ColNames>bp_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+    </key>
+    <column id="373" parent="296" name="case_id">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="374" parent="296" name="mark">
+      <DataType>varchar(30)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="375" parent="296" name="model">
+      <DataType>varchar(30)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="376" parent="296" name="price">
+      <DataType>int|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="377" parent="296" name="hierarchy">
+      <DataType>int|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <key id="378" parent="296" name="PRIMARY">
+      <ColNames>case_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+    </key>
+    <column id="379" parent="297" name="cooling_id">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="380" parent="297" name="mark">
+      <DataType>varchar(30)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="381" parent="297" name="model">
+      <DataType>varchar(30)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="382" parent="297" name="price">
+      <DataType>int|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="383" parent="297" name="tdp">
+      <DataType>int|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <key id="384" parent="297" name="PRIMARY">
+      <ColNames>cooling_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+    </key>
+    <column id="385" parent="298" name="cpu_id">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="386" parent="298" name="mark">
+      <DataType>varchar(30)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="387" parent="298" name="cpu_line">
+      <DataType>varchar(30)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="388" parent="298" name="model">
       <DataType>varchar(30)|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="356" parent="294" name="chipset">
+    <column id="389" parent="298" name="socket_cpu">
       <DataType>varchar(30)|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="357" parent="294" name="price">
+    <column id="390" parent="298" name="price">
       <DataType>int|0s</DataType>
-      <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <column id="358" parent="294" name="ddr">
+    <column id="391" parent="298" name="version">
       <DataType>varchar(30)|0s</DataType>
       <Position>7</Position>
     </column>
-    <key id="359" parent="294" name="PRIMARY">
-      <ColNames>board_id</ColNames>
+    <key id="392" parent="298" name="PRIMARY">
+      <ColNames>cpu_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+    </key>
+    <column id="393" parent="299" name="mb_id">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="394" parent="299" name="mark">
+      <DataType>varchar(30)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="395" parent="299" name="model">
+      <DataType>varchar(30)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="396" parent="299" name="socketm">
+      <DataType>varchar(30)|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="397" parent="299" name="chipset">
+      <DataType>varchar(30)|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="398" parent="299" name="price">
+      <DataType>int|0s</DataType>
+      <Position>6</Position>
+    </column>
+    <key id="399" parent="299" name="PRIMARY">
+      <ColNames>mb_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+    </key>
+    <column id="400" parent="300" name="ram_id">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="401" parent="300" name="mark">
+      <DataType>varchar(30)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="402" parent="300" name="model">
+      <DataType>varchar(30)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="403" parent="300" name="volume">
+      <DataType>int|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="404" parent="300" name="price">
+      <DataType>int|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <key id="405" parent="300" name="PRIMARY">
+      <ColNames>ram_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+    </key>
+    <column id="406" parent="301" name="ssd_id">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="407" parent="301" name="mark">
+      <DataType>varchar(30)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="408" parent="301" name="model">
+      <DataType>varchar(30)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="409" parent="301" name="price">
+      <DataType>int|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="410" parent="301" name="volume">
+      <DataType>int|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <key id="411" parent="301" name="PRIMARY">
+      <ColNames>ssd_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
     </key>
